@@ -21,28 +21,33 @@ export default function ProductTable (props) {
     }
     if (product.category !== lastCategory) {
       rows.push(
+        <div>
         <ProductCategoryRow
           category={product.category}
           key={product.category} />
+          <br/>
+        </div>
       );
     }
     rows.push(
+      <div>
       <ProductRow
         product={product}
         key={product.name}
       />
+      <br/>
+      </div>
     );
     lastCategory = product.category;
   });
-
 
   return (
     <div>
       <table>
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Price</th>
+            <td><h3>Name</h3></td>
+            <td><h3>Price</h3></td>
           </tr>
         </thead>
         <tbody>{rows}</tbody>

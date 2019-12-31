@@ -14,7 +14,6 @@ export default function SearchBar (props) {
   }
 
   return (
-
     <form>
         <input
           type="text"
