@@ -3,8 +3,7 @@ import SearchBar from './SearchBar';
 import ProductTable from './ProductTable';
 import AuthContext from './auth-context'
 
-
-export default (props) => {
+export default function FilterableProductTable (props) {
 
   const [filterText, setFilterText] = useState('');
   const [inStockOnly, setInStockOnly] = useState(false);
@@ -58,5 +57,7 @@ export default (props) => {
   );
 
 }
+
+
 
 

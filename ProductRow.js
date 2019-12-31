@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default (props) => {
+export default function ProductRow (props) {
   
   const product = props.product;
   const name = product.stocked ?

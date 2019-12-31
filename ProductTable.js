@@ -3,7 +3,7 @@ import ProductCategoryRow from './ProductCategoryRow';
 import ProductRow from './ProductRow';
 import AuthContext from './auth-context'
 
-export default (props) => {
+export default function ProductTable (props) {
   
   const filterText = props.filterText;
   const inStockOnly = props.inStockOnly;
@@ -51,6 +51,9 @@ export default (props) => {
     </div>
   ); 
 }
+
+
+
 
 
 

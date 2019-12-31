@@ -1,7 +1,7 @@
 import React,{useContext} from 'react';
 import AuthContext from './auth-context'
 
-export default (props) => {
+export default function SearchBar (props) {
   
   const authContext = useContext(AuthContext);
 
@@ -35,6 +35,8 @@ export default (props) => {
       </form>
   ); 
 }
+
+
 
 
 
