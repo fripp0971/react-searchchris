@@ -8,9 +8,8 @@ export default (props) => {
 
   const [filterText, setFilterText] = useState('');
   const [inStockOnly, setInStockOnly] = useState(false);
-
   const [authenticated, setAuthenticated] = useState(false);
-  
+  const myButton = useRef(null);
 
   useEffect(() => {
     console.log('print this every render the filterText changes');
@@ -34,6 +33,7 @@ export default (props) => {
 
   const handleLogin = () => {
     setAuthenticated(!authenticated);
+    console.log(myButton.current);
   };
 
   return (
@@ -51,7 +51,7 @@ export default (props) => {
         inStockOnly={inStockOnly}
       />
       <p>
-      <button onClick={handleLogin}>{authenticated ? 'Logout' : 'Login'}</button>
+      <button ref={myButton} onClick={handleLogin}>{authenticated ? 'Logout' : 'Login'}</button>
       </p>
       </AuthContext.Provider>
     </div>
